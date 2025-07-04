@@ -12,13 +12,13 @@ function CreateToken() {
     const { connection } = useConnection();
     const wallet = useWallet();
 
-    const token_data: token_data = {
+    const token_data: any = {
         connection: connection,
         wallet: wallet,
-        token_name: token_name.current?.value || "",
-        token_symbol: token_symbol.current?.value || "",
-        token_supply: parseInt(token_supply.current?.value || "0"),
-        token_img: token_img.current?.value || "",
+        token_name: token_name.current?.value ,
+        token_symbol: token_symbol.current?.value ,
+        token_supply: parseInt(token_supply.current?.value ?? ""),
+        token_img: token_img.current?.value ,
     };
 
     console.log('token_data: ', token_data);

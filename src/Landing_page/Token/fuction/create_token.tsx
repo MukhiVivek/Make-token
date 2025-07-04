@@ -39,6 +39,9 @@ export async function create_token(data: token_data) {
         additionalMetadata: [],
     };
 
+    console.log('metadata: ', data);
+
+
     const mintLen = getMintLen([ExtensionType.MetadataPointer]);
 
     const metadataLen = TYPE_SIZE + LENGTH_SIZE + pack(metadata as any).length;
