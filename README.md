@@ -2,7 +2,7 @@
 
 A sleek and modern Solana-based portfolio dashboard that shows real-time balances for SOL and SPL tokens, portfolio value visualization, and allows users to create & mint their own tokens — all built using **React**, **Tailwind CSS**, **Solana Web3.js**, and **ShadCN UI**.
 
-![Screenshot](public/phone.png)
+![Screenshot](img/phone.png)
 
 ---
 
@@ -20,7 +20,7 @@ A sleek and modern Solana-based portfolio dashboard that shows real-time balance
 
 ## 📽️ Demo Video
 
-▶️ [Watch the full walkthrough](public/video.mov)
+▶️ [Watch the full walkthrough](img/video.mov)
 
 ---
 
