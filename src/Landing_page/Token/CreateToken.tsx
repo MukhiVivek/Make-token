@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { create_token, token_data } from "./fuction/create_token";
+import { create_token } from "./fuction/create_token";
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 
 function CreateToken() {
