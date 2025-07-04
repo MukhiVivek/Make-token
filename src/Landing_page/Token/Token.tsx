@@ -43,11 +43,7 @@ function TokenList() {
     return (
         <div className="min-h-screen bg-white dark:bg-black px-6 py-10 text-black dark:text-white">
             <h1 className="text-4xl font-extrabold text-center mb-10">Your Token Collection</h1>
-
-            {tokens.length === 0 ? (
-                <p className="text-center text-gray-500">No tokens created yet.</p>
-            ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
+                <div className="justify-center items-center mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
                     {tokens.map((token) => (
                         <div
                             key={token.mint_address}
@@ -111,9 +107,7 @@ function TokenList() {
                             Launch your next token with a few clicks.
                         </p>
                     </Link>
-
                 </div>
-            )}
         </div>
     );
 }
