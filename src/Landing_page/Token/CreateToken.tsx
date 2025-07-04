@@ -21,6 +21,8 @@ function CreateToken() {
         token_img: token_img.current?.value || "",
     };
 
+    console.log('token_data: ', token_data);
+    
     return (
 
         <div className="flex justify-center items-center  ">
