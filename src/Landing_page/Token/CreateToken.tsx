@@ -1,13 +1,13 @@
-import { useRef } from "react";
+import {  useState } from "react";
 import { create_token } from "./fuction/create_token";
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 
 function CreateToken() {
 
-    const token_name = useRef<HTMLInputElement>(null);
-    const token_symbol = useRef<HTMLInputElement>(null);
-    const token_supply = useRef<HTMLInputElement>(null);
-    const token_img = useRef<HTMLInputElement>(null);
+    const [tokenName, setTokenName] = useState("");
+    const [tokenSymbol, setTokenSymbol] = useState("");
+    const [tokenSupply, setTokenSupply] = useState("");
+    const [tokenImg, setTokenImg] = useState("");
 
     const { connection } = useConnection();
     const wallet = useWallet();
@@ -15,14 +15,14 @@ function CreateToken() {
     let token_data: any = {
         connection: connection,
         wallet: wallet,
-        token_name: token_name.current?.value ,
-        token_symbol: token_symbol.current?.value ,
-        token_supply: parseInt(token_supply.current?.value ?? ""),
-        token_img: token_img.current?.value ,
+        token_name: tokenName,
+        token_symbol: tokenSymbol,
+        token_supply: parseInt(tokenSupply),
+        token_img: tokenImg,
     };
 
     console.log('token_data: ', token_data);
-    
+
     return (
 
         <div className="flex justify-center items-center  ">
@@ -31,27 +31,31 @@ function CreateToken() {
                 <input
                     type="text"
                     placeholder="Ex : Solana"
-                    ref={token_name}
+                    onChange={(e) => setTokenName(e.target.value)}
+                    value={tokenName}
                     className="w-100 mb-3 border border-gray-300 px-4 py-2 rounded-2xl"
                 />
                 <label className="block mb-2 text-xl">Token Symbol :</label>
                 <input
                     type="text"
                     placeholder="Ex : SOL"
-                    ref={token_symbol}
+                    onChange={(e) => setTokenSymbol(e.target.value)}
+                    value={tokenSymbol}
                     className="w-100 mb-3 border border-gray-300 px-4 py-2 rounded-2xl"
                 />
                 <label className="block mb-2 text-xl">Token Initial Supply :</label>
                 <input
                     type="text"
                     placeholder="Ex : 1000"
-                    ref={token_supply}
+                    onChange={(e) => setTokenSupply(e.target.value)}
+                    value={tokenSupply}
                     className="w-100 mb-3 border border-gray-300 px-4 py-2 rounded-2xl"
                 />
                 <label className="block mb-2 text-xl">Token Img Url :</label>
                 <input
                     type="text"
-                    ref={token_img}
+                    onChange={(e) => setTokenImg(e.target.value)}
+                    value={tokenImg}
                     placeholder="Ex : www.img.com/123"
                     className="w-100 mb-7 border border-gray-300 px-4 py-2 rounded-2xl"
                 />
