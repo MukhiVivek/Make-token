@@ -88,16 +88,16 @@ function TokenList() {
                                 />
                                 <button
                                     onClick={() => handleAddSupply(token.mint_address, token.token_address, wallet , connection)}
-                                    className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-xl text-sm flex items-center gap-1"
+                                    className="rounded-2xl px-3 py-1 w-auto bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-black border-2 border-transparent hover:animate-border-rgb shadow-lg hover:shadow-[0_0_15px_3px_rgba(255,0,128,0.6)] transition-shadow duration-500"
                                 >
-                                    + Add
+                                    Add
                                 </button>
                             </div>
                         </div>
                     ))}
                     <Link
                         to="/token-create"
-                        className="cursor-pointer flex flex-col items-center justify-center text-center rounded-2xl p-6 bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-black border-2 border-transparent hover:animate-border-rgb shadow-lg hover:shadow-[0_0_15px_3px_rgba(255,0,128,0.6)] transition-all duration-500 hover:scale-105"
+                        className="py-23 cursor-pointer flex flex-col items-center justify-center text-center rounded-2xl p-6 bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-black border-2 border-transparent hover:animate-border-rgb shadow-lg hover:shadow-[0_0_15px_3px_rgba(255,0,128,0.6)] transition-all duration-500 hover:scale-105"
                     >
                         <div className="w-20 h-20 rounded-full bg-indigo-600 text-white flex items-center justify-center text-4xl font-bold mb-4">
                             +
