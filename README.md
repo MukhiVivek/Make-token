@@ -1,54 +1,41 @@
-# React + TypeScript + Vite
+# 🚀 Solana Token Maker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek and modern Solana-based portfolio dashboard that shows real-time balances for SOL and SPL tokens, portfolio value visualization, and allows users to create & mint their own tokens — all built using **React**, **Tailwind CSS**, **Solana Web3.js**, and **ShadCN UI**.
 
-Currently, two official plugins are available:
+![Screenshot](public/phone.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🌟 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🪙 **Connect Wallet** — Compatible with Solana wallets (Phantom, Backpack, etc.)
+- 📊 **Live Portfolio Overview** — SOL & SPL token balances with USD value
+- 🎨 **Dark / Light Mode** — Beautiful UI with ShadCN + Tailwind CSS
+- 🧩 **Mainnet / Devnet Switch** — Easily toggle between environments
+- 🛠 **Create & Mint Token** — Custom token creation and supply management
+- 🧠 **Token Metadata Support** — Shows names/symbols using Solana token list
+- 📱 **Responsive Design** — Looks great on both mobile and desktop
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📽️ Demo Video
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+▶️ [Watch the full walkthrough](public/video.mov)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+## 🧪 Tech Stack
+
+- **Frontend:** React, TypeScript, Tailwind CSS, ShadCN/UI
+- **Solana:** `@solana/web3.js`, `@solana/spl-token`
+- **State Management:** React Hooks
+- **Wallet Adapter:** `@solana/wallet-adapter-react`
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/yourusername/solana-token-dashboard.git
+cd solana-token-dashboard
+npm install
