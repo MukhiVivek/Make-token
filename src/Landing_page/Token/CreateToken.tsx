@@ -12,7 +12,7 @@ function CreateToken() {
     const { connection } = useConnection();
     const wallet = useWallet();
 
-    const token_data: any = {
+    let token_data: any = {
         connection: connection,
         wallet: wallet,
         token_name: token_name.current?.value ,
